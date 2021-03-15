@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <!-- Compiled and minified JavaScript -->     
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- Compiled and minified CSS -->     
+           
+     <script type="text/javascript">
+        function test(){
+            fetch('https://jsonplaceholder.typicode.com/users')
+            .then(res=>res.json())
+            .then(res=>console.log(res))
+            .catch(err=>console.log(err))
+        }
+     </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper black">
+          <a href="#" class="brand-logo" style="padding-left: 10px;">DXC Amelia VA</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#">Logout</a></li>            
+          </ul>
+        </div>
+      </nav>    
+
+
+      <!--
+          FORM BEGINS
+      -->
+      <div class="container" style="display: flex;margin-top: 1%;">
+        <div class="row" style="flex-direction:row;justify-content: center;align-items: center;">
+            <form class="col">
+            <div class="row">
+                <div class="input-field col">
+                <input id="first_name" type="text" class="validate">
+                <label for="first_name">Email/Username</label>
+                </div>           
+            </div>
+            <div class="row">
+                <div class="input-field col">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                </div>
+            </div> 
+            
+            <div class="row">
+                <div class="input-field col">                    
+                    <a class="waves-effect waves-light black btn" onclick="test()">LOGIN</a>
+                </div>
+            </div>   
+
+            </form>
+        </div>
+
+            
+
+    </div>          
+       <!--
+          FORM ENDS
+      -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
