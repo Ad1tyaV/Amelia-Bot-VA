@@ -17,7 +17,10 @@
         }
      </script>
 	 
-	  <style>        
+	  <style>     
+		body{
+			background-color: #000000;
+		}
         .chat-overlay {
         position: fixed;
         width: 376px;
@@ -77,9 +80,10 @@
         }
         
         .chat-overlay-header-img {
+		background-color:'black';
         position: absolute;
-        max-width: 14px;
-        max-height: 14px;
+        max-width: 48px;
+        max-height: 48px;
         transition: opacity 1s ease-in-out;
         opacity: 1;
         right: 0px;
@@ -218,7 +222,7 @@
       </iframe>
       <div class="chat-overlay-header">
         <img class="chat-overlay-header-img close" src="./close.png" alt="toggle chat overlay" />
-        <img class="chat-overlay-header-img open" src="./open.png" alt="toggle chat overlay" />
+        <img class="chat-overlay-header-img open" src="./message.png" alt="toggle chat overlay" />
       </div>
   </div>
 </div>
@@ -282,7 +286,10 @@
             console.log('No localStorage support')
         }
   
-    </script>			 
+    </script>
+	
+	
+	  
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
