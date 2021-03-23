@@ -80,18 +80,33 @@
         }
         
         .chat-overlay-header-img {
-		background-color:'black';
-        position: absolute;
-        max-width: 48px;
-        max-height: 48px;
-        transition: opacity 1s ease-in-out;
-        opacity: 1;
-        right: 0px;
-        left: 0px;
-        top: 0px;
-        bottom: 0px;
-        margin: auto;
+			background-color:'black';
+			position: absolute;
+			max-width: 48px;
+			max-height: 48px;
+			transition: opacity 1s ease-in-out;
+			opacity: 1;
+			right: 0px;
+			left: 0px;
+			top: 0px;
+			bottom: 0px;
+			margin: auto;
         }
+		
+		.chat-overlay-header-img-expand{		
+			background-color:'black';
+			position: absolute;
+			max-width: 48px;
+			max-height: 48px;
+			transition: opacity 1s ease-in-out;
+			opacity: 1;
+			right: 100px;
+			left: -50;
+			top: 0px;
+			bottom: 0px;
+			margin: auto;
+	
+		}
         
         .chat-overlay-header-img.open {
         opacity: 0;
@@ -188,13 +203,22 @@
             receiverElem.postMessage(data, "https://MyAmelia.ipsoft.com/Amelia/ui/MyAmeliaUIBundle/?embed=iframe&domainCode=MyAmeliaDomainCode");
           }
         window.addEventListener('message', receiveMessage);
+		
+		function resize(){
+			document.getElementsByClassName("chat-overlay")[0].setAttribute("style","height:750px;width:850px")
+			document.getElementsByClassName("chat-overlay-wrapper")[0].setAttribute("style","height:750px;width:850px")
+			
+			document.getElementsByClassName("chat-overlay")[0].setAttribute("style","height:500px;width:376px")
+			document.getElementsByClassName("chat-overlay-wrapper")[0].setAttribute("style","height:500px;width:376px")
+			
+		}
     </script>
 	 
 </head>
 <body>
     <nav>
         <div class="nav-wrapper black">
-          <a href="#" class="brand-logo" style="padding-left: 10px;">DXC Amelia VA</a>
+          <a href="https://dxc.dev.amelia.com/Amelia/ui/MyAmeliaUIBundle/?embed=iframe&domainCode=dxc" target="_blank" class="brand-logo" style="padding-left: 10px;" >DXC Amelia VA</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="#">Test</a></li>            
           </ul>
@@ -223,6 +247,7 @@
       <div class="chat-overlay-header">
         <img class="chat-overlay-header-img close" src="./close.png" alt="toggle chat overlay" />
         <img class="chat-overlay-header-img open" src="./message.png" alt="toggle chat overlay" />
+		<!--<img class="chat-overlay-header-img-expand" src="./expand.png" alt="toggle chat overlay" />-->
       </div>
   </div>
 </div>
