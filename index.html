@@ -17,9 +17,32 @@
         }
      </script>
 	 
-	  <style>     
+	  <style>  
+		#resources{
+			width:50%;
+			margin-left:3vh;
+			margin-top:10vh;
+		}
+		#resources a{
+			color:whitesmoke;
+		}
+		
+		#resources a:hover{
+			color:yellow;
+		}
+		
+		#resources td{
+			text-align:center;
+			font-size:2.25vh;
+		}
 		body{
 			background-color: #000000;
+		}
+		tr{
+			color:white;
+		}
+		td{
+			color:white;
 		}
         .chat-overlay {
         position: fixed;
@@ -172,7 +195,14 @@
             width: 100%;
             height: 100%;
         }
-        }
+		
+		@media (max-width:360px){
+			nav .brand-logo{
+				font-size:3.85vh;
+			}
+		}
+        
+		
 
     </style>        
     <script>
@@ -220,7 +250,7 @@
         <div class="nav-wrapper black">
           <a href="https://dxc.dev.amelia.com/Amelia/ui/MyAmeliaUIBundle/?embed=iframe&domainCode=dxc" target="_blank" class="brand-logo" style="padding-left: 10px;" >DXC Amelia VA</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#">Test</a></li>            
+            <!--<li><a href="#">Test</a></li>            -->
           </ul>
         </div>
       </nav>    
@@ -318,6 +348,14 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	
+	<table id="resources" style="border:solid;border-color:white">
+		<tr><td>National Suicide Prevention Lifeline</td><td><a href="tel:1-800-273-8255">1-800-273-8255</a></td></tr>		
+		<tr><td>Veteran Affairs</td><td><a href="https://www.va.gov/">https://www.va.gov/</a></td></tr>	
+		<tr><td>Veterans Crisis Line</td><td><a href="https://www.veteranscrisisline.net/get-help/chat">https://www.veteranscrisisline.net/get-help/chat</a></td></tr>	
+		<tr><td>Veterans Health Benefits</td><td><a href="https://www.va.gov/health-care/about-va-health-benefits">https://www.va.gov/health-care/about-va-health-benefits</a></td></tr>
+		<tr><td>Department of Veteran Affairs</td><td><a href="https://iris.custhelp.va.gov/">https://iris.custhelp.va.gov/</a></td></tr>
+	</table>
 	
 </body>
 </html>
