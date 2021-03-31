@@ -19,7 +19,7 @@
 	 
 	  <style>  
 		#resources{
-			width:50%;
+			width:25%;
 			margin-left:3vh;
 			margin-top:10vh;
 		}
@@ -46,15 +46,18 @@
 		}
         .chat-overlay {
         position: fixed;
-        width: 376px;
-        height: 500px;
+        width: 1250px;
+        height: 960px;
         bottom: 24px;
         right: 24px;
         z-index: 90;
+		/*margin-bottom:16%;*/
+		margin-left:1%;
         }
         
         .chat-overlay-open {
             height: 512px;
+			margin-bottom:16%;
         }
         
         .chat-overlay-closed {
@@ -63,8 +66,10 @@
         }
         
         .chat-overlay-wrapper {
-        width: 376px;
-        height: 448px;
+        width: 1250px;
+        height: 788px;
+		margin-bottom:15%;
+		margin-left:1%;
         }
         
         .chat-overlay-header-mobile {
@@ -139,7 +144,7 @@
         display: none;
         }
         
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 812px) {
         .chat-overlay {
             width: 100%;
             position: fixed;
@@ -149,7 +154,7 @@
         .chat-overlay-header-mobile {
             display: flex;
             width: inherit;
-            height: 9%;
+            height: 14%;
             background: #4d5aff;
         }
         
